@@ -1,0 +1,4 @@
+position startpos
+searchbenchmark m 5
+quit
+=============================================================

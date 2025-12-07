@@ -10,9 +10,12 @@
             "-g",
             "-Wall",
             "-I${workspaceFolder}/externals/chess-library/include",
-            "${workspaceFolder}/src/main.cpp",
+            "${workspaceFolder}/src/*.cpp",
             "-o",
-            "${workspaceFolder}/main.exe"
+            "${workspaceFolder}/main.exe",
+            "-O3",//optimization flags below
+            "-march=native",
+            "-DNDEBUG"
             ],
             "group": {
                 "kind": "build",
