@@ -4,14 +4,9 @@
 
 class ChessEngine;
 
-void simple_ab_search(ChessEngine& ce);
 
-void playout(ChessEngine& ce, int depth_limit);
+float evaluate_for_side(const chess::Board& board, chess::Color color);
 
-void playout_wrapper(ChessEngine& ce);
-void playout_wrapper(ChessEngine& ce, int depth_limit);
+float evaluate_for_white(const chess::Board& board);
 
-int negamax_search(ChessEngine& ce, chess::Board& board, int depth, float alpha, float beta);
-chess::Move negamax_caller(ChessEngine& ce, chess::Board& board, int depth, bool print_info, int time_limit_ms);
-
-
+chess::Move find_move(ChessEngine* engine, chess::Board board, int time_limit_ms, bool emit_info);
